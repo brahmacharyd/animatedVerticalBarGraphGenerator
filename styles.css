@@ -1,37 +1,22 @@
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
+:root {
+  --graph-height: 300px;
 
-.input-container {
-  margin-bottom: 20px; /* Add margin at the bottom to separate from the graph */
 }
 
 .graph-container {
-  width: 800px;
-  height: 300px;
-  border: 1px solid #ccc;
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-end; /* Align bars from bottom to top */
-  padding: 0px;
-  position: relative; /* Required for absolute positioning of labels */
-  margin: auto;
+  height: var(--graph-height);
 }
 
 .bar {
   width: 60px;
-  background-color: blue;
-  position: relative; /* Required for absolute positioning of labels */
-  transition: height 0.5s ease-in-out; /* Add transition for smooth height change */
+  transition: height 0.5s ease-in-out;
 }
 
 .percentage-label {
-  position: absolute;
-  bottom: -20px; /* Position the label below the bar */
+  bottom: -20px;
   left: 50%;
   transform: translateX(-50%);
+}
+.btn-primary {
+  background-color: #ff8c00;
 }

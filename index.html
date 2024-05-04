@@ -4,17 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Animated Vertical Bar Graph Generator</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
   <div class="container">
-    <div class="row">
+    <div class="row mt-5">
       <div class="col-md-8 offset-md-2">
-        <h1><b>Animated Vertical Bar Graph Generator</b></h1>
+        <h1 class="mt-5"><b>Animated Vertical Bar Graph Generator</b></h1>
         <p class="description">This project is an Animated Vertical Bar Graph Generator implemented using HTML, CSS, and JavaScript. Users can input a series of numbers, and based on these numbers, it generates a vertical bar graph where each bar's height corresponds to a percentage calculated from pairs of digits in the input number. The graph is generated with smooth animations, providing a visually appealing representation of the data.</p>
         <div class="input-group mb-3">
-          <input type="text" class="form-control" id="inputNumber" placeholder="Enter Numbers">
+          <input type="text" class="form-control" id="inputNumber" placeholder="Enter Your Mobile Number Here!">
           <div class="input-group-append">
             <button class="btn btn-primary" id="generateGraph" type="button">Generate Graph</button>
           </div>
@@ -22,7 +22,7 @@
         <div id="errorMessage" class="text-danger"></div>
       </div>
 
-      <div class="graph-container">
+      <div class="align-items-end border d-flex graph-container justify-content-around m-auto position-relative w-75">
         <div class="bar">
           <div class="percentage-label"></div>
         </div>
@@ -38,12 +38,6 @@
         <div class="bar">
           <div class="percentage-label"></div>
         </div>
-      </div>
-    </div>
-    
-    <div class="row">
-      <div class="col-md-8 offset-md-2">
-        
       </div>
     </div>
   </div>

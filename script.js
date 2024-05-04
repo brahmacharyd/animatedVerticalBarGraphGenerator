@@ -32,13 +32,14 @@ document.addEventListener("DOMContentLoaded", function() {
     // Add new bars and labels with animation
     percentages.forEach((percentage, index) => {
       const bar = document.createElement('div');
-      bar.classList.add('bar');
+      bar.classList.add('bar', 'bg-primary', 'position-relative');
+      bar.classList.add()
       bar.style.height = '0'; // Start with height 0 for animation
       setTimeout(() => {
         bar.style.height = `${percentage}%`; // Set the height after a delay for animation
       }, index * 100); // Delay increases with each bar
       const label = document.createElement('div');
-      label.classList.add('percentage-label');
+      label.classList.add('percentage-label','position-absolute');
       label.textContent = `${percentage}%`;
 
       bar.appendChild(label);
