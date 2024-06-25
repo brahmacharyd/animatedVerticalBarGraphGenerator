@@ -17,7 +17,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Calculate percentages for each digit pair
     for (let i = 0; i < digits.length - 1; i += 2) {
-      const percentage = parseInt(`${digits[i]}${digits[i + 1]}`, 10);
+      let percentage;
+      if (i + 1 < digits.length) {
+        percentage = `${digits[i]}${digits[i + 1]}`; // Combine two digits as string
+      } else {
+        percentage = `${digits[i]}`; // Last single digit
+      }
       percentages.push(percentage);
     }
 
@@ -33,7 +38,6 @@ document.addEventListener("DOMContentLoaded", function() {
     percentages.forEach((percentage, index) => {
       const bar = document.createElement('div');
       bar.classList.add('bar', 'bg-primary', 'position-relative');
-      bar.classList.add()
       bar.style.height = '0'; // Start with height 0 for animation
       setTimeout(() => {
         bar.style.height = `${percentage}%`; // Set the height after a delay for animation
